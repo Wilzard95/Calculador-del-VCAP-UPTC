@@ -1,0 +1,11 @@
+{
+  "name": "calculador-del-vcap-uptc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Calculador interactivo del Valor del Crédito Académico de Posgrado UPTC",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test tests/model.test.mjs"
+  }
+}

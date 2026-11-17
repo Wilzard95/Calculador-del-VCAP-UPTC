@@ -1,0 +1,361 @@
+{
+  "version": "1.0.0",
+  "baseYear": 2026,
+  "currency": "COP",
+  "sources": {
+    "rubric": "MVV_v5_UPTC.docx · tablas 2 y 3 y numerales 3.1 a 3.4",
+    "base": "Documento Técnico Acuerdo Financiero · figura 10 · base estimada 2026",
+    "interpretation": "Rangos de la tabla 3, con selección de puntaje en pasos de 0,1 por instrucción del solicitante. Esta instrucción prevalece sobre las referencias contradictorias a puntajes fijos del documento."
+  },
+  "levels": [
+    {
+      "id": "especializacion",
+      "label": "Especialización",
+      "bases": {
+        "presencial": 450000,
+        "hibrida": 382500,
+        "virtual": 315000
+      }
+    },
+    {
+      "id": "maestria",
+      "label": "Maestría",
+      "bases": {
+        "presencial": 630000,
+        "hibrida": 535500,
+        "virtual": 441000
+      }
+    },
+    {
+      "id": "doctorado",
+      "label": "Doctorado",
+      "bases": {
+        "presencial": 900000,
+        "hibrida": 765000,
+        "virtual": 630000
+      }
+    }
+  ],
+  "modalities": [
+    {
+      "id": "presencial",
+      "label": "Presencial"
+    },
+    {
+      "id": "hibrida",
+      "label": "Híbrida"
+    },
+    {
+      "id": "virtual",
+      "label": "Virtual"
+    }
+  ],
+  "ranges": [
+    {
+      "min": 1,
+      "max": 1.7,
+      "initial": 1.4
+    },
+    {
+      "min": 1.8,
+      "max": 2.4,
+      "initial": 2.1
+    },
+    {
+      "min": 2.5,
+      "max": 3.2,
+      "initial": 3
+    },
+    {
+      "min": 3.3,
+      "max": 3.8,
+      "initial": 3.6
+    },
+    {
+      "min": 3.9,
+      "max": 5,
+      "initial": 4.5
+    }
+  ],
+  "groups": [
+    {
+      "id": "CP",
+      "label": "Características del programa",
+      "weight": 20,
+      "description": "Condiciones académicas, recursos especializados y población objetivo.",
+      "questions": [
+        {
+          "id": "CP1",
+          "text": "¿Cuál es el nivel de requerimientos de infraestructura física, tecnológica, laboratorios, software, equipamiento o recursos especializados necesarios para desarrollar el programa?",
+          "options": [
+            "Muy bajo: utiliza casi exclusivamente recursos institucionales existentes y no genera costos diferenciales.",
+            "Bajo: requiere recursos adicionales ocasionales y de bajo costo.",
+            "Medio: requiere infraestructura o tecnología especializada de utilización regular.",
+            "Alto: requiere recursos especializados, licenciamiento, laboratorios, equipos o servicios con costos significativos.",
+            "Muy alto: demanda infraestructura altamente especializada, operación permanente, mantenimiento, adquisición o contratación externa de alto costo."
+          ],
+          "source": "PAE, inventario de infraestructura, licencias, laboratorios, observatorio laboral, cotizaciones y presupuesto del programa.",
+          "title": "Infraestructura y recursos"
+        },
+        {
+          "id": "CP2",
+          "text": "¿Qué nivel de costos diferenciales genera la naturaleza disciplinar y académica del programa frente a otros programas del mismo nivel de formación?",
+          "options": [
+            "Muy bajo: no presenta costos diferenciales relevantes.",
+            "Bajo: presenta algunos requerimientos adicionales de bajo impacto.",
+            "Medio: requiere prácticas, materiales, servicios, desplazamientos u otros recursos recurrentes.",
+            "Alto: varios componentes curriculares demandan recursos adicionales significativos.",
+            "Muy alto: la naturaleza disciplinar del programa implica costos estructuralmente superiores frente al promedio institucional del mismo nivel."
+          ],
+          "source": "Estudio de costos, PAE, programación académica, prácticas, materiales y servicios especializados.",
+          "title": "Costos de la disciplina"
+        },
+        {
+          "id": "CP3",
+          "text": "¿Cuántos graduados afines existen en el mercado geográfico del programa por cada cupo ofertado en ese mercado?",
+          "options": [
+            "Muy reducido: menos de 5 graduados afines por cupo.",
+            "Reducido: de 5 a menos de 10 graduados afines por cupo.",
+            "Medio: de 10 a menos de 20 graduados afines por cupo.",
+            "Amplio: de 20 a menos de 40 graduados afines por cupo.",
+            "Muy amplio: 40 o más graduados afines por cupo."
+          ],
+          "source": "SNIES, observatorios de graduados, estadísticas institucionales, estudios de pertinencia y mercado.",
+          "title": "Mercado potencial"
+        },
+        {
+          "id": "CP4",
+          "text": "¿Cuál es la capacidad económica estimada de la población profesional objetivo del programa, tomando como referencia el ingreso laboral promedio o mediano del sector o área de conocimiento correspondiente?",
+          "options": [
+            "Muy baja: ingreso inferior a 2 SMLMV.",
+            "Baja: ingreso entre 2 y menos de 3 SMLMV.",
+            "Media: ingreso entre 3 y menos de 4 SMLMV.",
+            "Alta: ingreso entre 4 y menos de 6 SMLMV.",
+            "Muy alta: ingreso igual o superior a 6 SMLMV."
+          ],
+          "source": "Observatorio Laboral para la Educación, estudios sectoriales, información salarial y estudios de mercado.",
+          "title": "Capacidad económica"
+        },
+        {
+          "id": "CP5",
+          "text": "¿Cuál es el comportamiento reciente del sector económico, profesional o disciplinar al cual se dirige principalmente el programa?",
+          "options": [
+            "Contracción significativa: disminución sostenida del empleo o de oportunidades profesionales.",
+            "Contracción moderada.",
+            "Comportamiento estable.",
+            "Crecimiento moderado.",
+            "Crecimiento alto: expansión del empleo, inversión, demanda de talento especializado o nuevas áreas de desempeño."
+          ],
+          "source": "DANE, observatorios laborales, estudios sectoriales, gremios y análisis de pertinencia.",
+          "title": "Dinámica del sector"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "Competencia de mercado",
+      "weight": 20,
+      "description": "Oferta comparable, precios y diferenciación del programa.",
+      "questions": [
+        {
+          "id": "C1",
+          "text": "¿Cuántos programas directamente comparables se ofrecen en el mercado objetivo del programa?",
+          "options": [
+            "Muy alta competencia: 10 o más programas.",
+            "Alta: 7–9 programas.",
+            "Media: 4–6 programas.",
+            "Baja: 1–3 programas.",
+            "Muy baja o inexistente: no existe una oferta directamente comparable."
+          ],
+          "source": "SNIES, páginas oficiales de IES, estudios de mercado y análisis de competencia.",
+          "title": "Oferta comparable"
+        },
+        {
+          "id": "C2",
+          "text": "¿Cómo se compara el valor promedio del crédito de los principales programas competidores con el VBCI correspondiente al programa UPTC?",
+          "options": [
+            "Mucho menor: competidores ≤80 % del VBCI.",
+            "Menor: 81–90 % del VBCI.",
+            "Similar: 91–105 % del VBCI.",
+            "Superior: 106–120 % del VBCI.",
+            "Mucho mayor: >120 % del VBCI."
+          ],
+          "source": "Tarifas oficiales de IES comparables, estudios de mercado y VBCI institucional vigente.",
+          "title": "Precio de los competidores"
+        },
+        {
+          "id": "C3",
+          "text": "¿Cuántos atributos diferenciales verificables presenta el programa frente a los programas comparables identificados en la pregunta 1 de Competencia?",
+          "options": [
+            "Muy bajo: ningún atributo diferencial verificable.",
+            "Bajo: un atributo diferencial verificable.",
+            "Medio: dos atributos diferenciales verificables.",
+            "Alto: tres atributos diferenciales verificables.",
+            "Muy alto: cuatro o más atributos diferenciales verificables."
+          ],
+          "source": "PAE, registros calificados, acreditación, líneas de investigación, convenios, internacionalización y estudios de mercado.",
+          "title": "Atributos diferenciales"
+        },
+        {
+          "id": "C4",
+          "text": "¿Qué proporción de los programas competidores tiene un valor de matrícula inferior al valor proyectado para el programa UPTC?",
+          "options": [
+            "Muy alta presión competitiva: más del 75 %.",
+            "Alta: 51–75 %.",
+            "Media: 31–50 %.",
+            "Baja: 11–30 %.",
+            "Muy baja: 10 % o menos."
+          ],
+          "source": "Comparativo de matrículas de programas similares y valor proyectado del programa UPTC.",
+          "title": "Presión de precios"
+        },
+        {
+          "id": "C5",
+          "text": "¿Cómo ha evolucionado el número de programas competidores durante los últimos tres años?",
+          "options": [
+            "Crecimiento muy alto de nueva oferta.",
+            "Crecimiento alto.",
+            "Oferta relativamente estable.",
+            "Disminución moderada de la oferta.",
+            "Disminución significativa o ausencia de nuevos competidores."
+          ],
+          "source": "SNIES, análisis longitudinal de oferta y estudios de competencia.",
+          "title": "Evolución de la oferta"
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "label": "Estudiantes",
+      "weight": 30,
+      "description": "Demanda, matrícula y apertura de cohortes del programa.",
+      "questions": [
+        {
+          "id": "E1",
+          "text": "¿Cuál ha sido la variación promedio del número de estudiantes matriculados en las últimas tres cohortes o períodos comparables?",
+          "options": [
+            "Disminución superior al 20 %.",
+            "Disminución entre 10 % y 20 %.",
+            "Estabilidad: variación entre −9,9 % y +9,9 %.",
+            "Incremento entre 10 % y 20 %.",
+            "Incremento superior al 20 %."
+          ],
+          "source": "Sistema de Registro Académico, históricos de matrícula y reportes institucionales.",
+          "title": "Tendencia de la matrícula"
+        },
+        {
+          "id": "E2",
+          "text": "¿Cuál es la relación entre la demanda calificada del programa y el número de cupos disponibles?",
+          "options": [
+            "Muy baja: menos de 0,75 aspirantes que cumplen requisitos por cupo.",
+            "Baja: 0,75–0,99 aspirantes por cupo.",
+            "Media: 1,0–1,49 aspirantes por cupo.",
+            "Alta: 1,5–1,99 aspirantes por cupo.",
+            "Muy alta: 2 o más aspirantes calificados por cupo."
+          ],
+          "source": "Inscritos, admitidos, cupos ofertados y registros del proceso de admisión.",
+          "title": "Demanda por cupo"
+        },
+        {
+          "id": "E3",
+          "text": "¿En qué proporción el número de estudiantes efectivamente matriculados alcanza la meta de matrícula prevista para la cohorte?",
+          "options": [
+            "Menos del 60 %.",
+            "Entre 60 % y 79 %.",
+            "Entre 80 % y 99 %.",
+            "Entre 100 % y 119 %.",
+            "120 % o más."
+          ],
+          "source": "Meta de matrícula, estudiantes matriculados y planeación de cohortes.",
+          "title": "Meta de matrícula"
+        },
+        {
+          "id": "E4",
+          "text": "¿Con qué regularidad el programa ha logrado abrir las cohortes programadas durante los últimos tres años por contar con demanda suficiente?",
+          "options": [
+            "20 % o menos de las cohortes programadas.",
+            "21–40 %.",
+            "41–60 %.",
+            "61–80 %.",
+            "Más del 80 %."
+          ],
+          "source": "Programación histórica de cohortes, actas de apertura y registros de matrícula.",
+          "title": "Apertura de cohortes"
+        }
+      ]
+    },
+    {
+      "id": "P",
+      "label": "Profesores",
+      "weight": 30,
+      "description": "Disponibilidad, especialización y costos de la estructura docente.",
+      "questions": [
+        {
+          "id": "P1",
+          "text": "¿Qué proporción de las horas de acompañamiento directo puede ser atendida por profesores de la Universidad dentro de su actividad académica normal?",
+          "options": [
+            "80 % o más.",
+            "60–79 %.",
+            "40–59 %.",
+            "20–39 %.",
+            "Menos del 20 %."
+          ],
+          "source": "Planes de trabajo académico, programación docente y disponibilidad de profesores.",
+          "title": "Carga cubierta por planta"
+        },
+        {
+          "id": "P2",
+          "text": "¿Cuál es la disponibilidad institucional de profesores con el perfil académico y disciplinar requerido por el programa?",
+          "options": [
+            "Muy alta: todos o casi todos los perfiles están disponibles.",
+            "Alta: se requiere contratación excepcional.",
+            "Media: se requieren algunas contrataciones adicionales.",
+            "Baja: buena parte de los perfiles requiere contratación adicional.",
+            "Muy baja: el programa depende mayoritariamente de profesores externos o vinculaciones adicionales."
+          ],
+          "source": "Perfiles docentes requeridos, planta disponible, banco de elegibles y programación académica.",
+          "title": "Disponibilidad de perfiles"
+        },
+        {
+          "id": "P3",
+          "text": "¿Cómo se compara el costo docente proyectado del programa con el costo promedio de programas UPTC del mismo nivel de formación?",
+          "options": [
+            "Inferior al 80 % del promedio.",
+            "Entre 80 % y 89 %.",
+            "Entre 90 % y 110 %.",
+            "Entre 111 % y 125 %.",
+            "Superior al 125 %."
+          ],
+          "source": "Costeo docente del programa y promedio institucional por nivel de formación.",
+          "title": "Costo docente comparado"
+        },
+        {
+          "id": "P4",
+          "text": "¿Qué proporción de las actividades académicas requiere acompañamiento docente altamente especializado, individualizado o en grupos reducidos?",
+          "options": [
+            "Menos del 20 %.",
+            "20–39 %.",
+            "40–59 %.",
+            "60–79 %.",
+            "80 % o más."
+          ],
+          "source": "Plan de estudios, PAE, programación académica y características de las actividades curriculares.",
+          "title": "Docencia especializada"
+        },
+        {
+          "id": "P5",
+          "text": "¿Qué proporción de la docencia requiere profesores externos nacionales o internacionales con costos superiores a la tarifa docente institucional de referencia?",
+          "options": [
+            "Menos del 10 %.",
+            "10–24 %.",
+            "25–39 %.",
+            "40–59 %.",
+            "60 % o más."
+          ],
+          "source": "Programación docente, contratos, tarifas institucionales y requerimientos de profesores externos.",
+          "title": "Docencia externa"
+        }
+      ]
+    }
+  ]
+}

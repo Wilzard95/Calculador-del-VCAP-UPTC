@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4c544">
+  <meta name="description" content="Calcula el Valor del Crédito Académico de Posgrado UPTC con 19 preguntas, rangos de valoración y bases por nivel y modalidad del modelo financiero 2026.">
+  <title>Calculador del VCAP UPTC</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#programa">Ir al calculador</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Calculador del VCAP UPTC, inicio"><span class="brand-mark">U</span><span><b>UPTC<span class="brand-divider"> / </span>POSGRADOS</b><small>Planeación académica y financiera</small></span></a>
+    <a class="header-link" href="#metodologia">Conocer el modelo <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="page">
+    <section class="intro" aria-labelledby="titulo">
+      <div><p class="eyebrow"><span class="status-dot"></span> MODELO DE VALORACIÓN DE VARIABLES</p><h1 id="titulo">Calculador del <span>VCAP.</span></h1><p class="intro-text">Define las condiciones de tu programa y estima el valor de su crédito académico de posgrado.</p></div>
+      <div class="intro-note"><span class="mini-label">UNA DECISIÓN CON FUNDAMENTO</span><p>4 variables <span>·</span> 19 preguntas</p><small>Valores base del modelo financiero · 2026</small></div>
+    </section>
+    <div id="load-error" class="error-panel" hidden role="alert"></div>
+    <div id="application" hidden>
+      <section id="programa" class="program-panel panel" aria-labelledby="program-title">
+        <div class="section-title"><span class="step-number">01</span><div><h2 id="program-title">Tu programa</h2><p>El nivel y la modalidad determinan el valor base del crédito.</p></div><span class="year-tag">BASE 2026</span></div>
+        <div class="program-fields">
+          <div class="field name-field"><label for="program-name">Nombre del programa</label><input id="program-name" maxlength="180" placeholder="Ej. Maestría en Educación" autocomplete="off"></div>
+          <div class="field"><label for="level">Nivel de formación</label><select id="level"></select></div>
+          <div class="field"><label for="modality">Modalidad</label><select id="modality"></select></div>
+          <div class="field"><label for="procedure">Situación del programa</label><select id="procedure"><option value="existente">Programa existente</option><option value="nuevo">Creación de programa (PAES)</option></select></div>
+        </div>
+        <div class="base-strip"><span>Valor base institucional <abbr title="Valor Base del Crédito Académico Institucional">VBCI</abbr></span><strong id="base-inline">—</strong><small>COP / crédito</small></div>
+      </section>
+      <div class="workspace">
+        <div class="questionnaire">
+          <div class="evaluation-heading"><div class="section-title"><span class="step-number">02</span><div><h2>Evalúa las variables</h2><p>Elige una respuesta y ajusta su puntaje dentro del rango.</p></div></div><button id="neutral-example" class="text-button" type="button">Probar caso neutro <span aria-hidden="true">↗</span></button></div>
+          <div id="group-tabs" class="group-tabs" role="tablist" aria-label="Variables de evaluación"></div>
+          <div class="group-intro"><div><p id="group-caption" class="eyebrow"></p><h3 id="group-title"></h3><p id="group-description"></p></div><div class="weight-badge"><strong id="group-weight"></strong><span>del cálculo</span></div></div>
+          <p id="new-program-note" class="context-note" hidden>Para un programa en creación, utiliza proyecciones justificadas de demanda, matrícula y cohortes. Conserva el estudio que respalda cada respuesta.</p>
+          <p class="score-help">Cada respuesta habilita un rango distinto. El puntaje inicial es una referencia: ajústalo en pasos de 0,1 según la evidencia del programa.</p>
+          <div id="question-panels"></div>
+          <div class="section-navigation"><button id="previous-group" class="button secondary" type="button">← Anterior</button><span id="section-position"></span><button id="next-group" class="button primary" type="button">Siguiente variable →</button></div>
+          <p class="local-note"><span aria-hidden="true">◉</span> <span id="save-status">Tus respuestas se guardan solo en este navegador.</span></p>
+        </div>
+        <aside class="result-panel" aria-labelledby="result-title">
+          <div class="result-top"><span class="eyebrow">TU ESTIMACIÓN</span><span id="result-state" class="result-state">En proceso</span></div>
+          <h2 id="result-title">Valor del crédito</h2><p id="result-program">Programa sin nombre</p>
+          <div class="price" id="result-value">—</div><p class="price-unit">pesos colombianos / crédito</p>
+          <p id="result-message" class="result-message">Completa las 19 preguntas para obtener tu estimación.</p>
+          <div class="completion"><div><span>Evaluación completada</span><strong id="completion-label">0 / 19</strong></div><progress id="completion-progress" value="0" max="19" aria-label="Preguntas respondidas"></progress></div>
+          <dl class="result-metrics"><div><dt>Base institucional</dt><dd id="summary-base">—</dd></div><div><dt>Puntaje compuesto <i>x</i></dt><dd id="summary-score">— <small>/ 5</small></dd></div><div><dt>Factor de ajuste <i>g(x)</i></dt><dd id="summary-factor">—</dd></div></dl>
+          <div class="score-scale"><span class="scale-marker" id="score-marker" hidden></span><div class="scale-line"></div><div class="scale-labels"><span>1 · Descuento</span><span>3</span><span>5 · Incremento</span></div></div>
+          <div id="group-scores" class="group-scores"></div>
+          <button id="review-button" class="button result-button" type="button">Revisar evaluación <span aria-hidden="true">↗</span></button>
+          <div class="result-actions"><button id="download" type="button" disabled>Descargar JSON ↓</button><button id="print" type="button" disabled>Imprimir / PDF ↗</button></div>
+          <p class="result-footnote">Estimación técnica del modelo. La adopción del valor requiere validación institucional.</p>
+        </aside>
+      </div>
+      <section id="desglose" class="detail-section panel" aria-labelledby="detail-title">
+        <div class="detail-heading"><div><p class="eyebrow">TRAZABILIDAD DEL CÁLCULO</p><h2 id="detail-title">Cada respuesta cuenta.</h2></div><button id="reset" class="text-button" type="button">Reiniciar evaluación</button></div>
+        <p id="report-identity"></p><p id="report-summary"></p>
+        <details id="audit-details"><summary>Ver matriz de respuestas y aportes al puntaje <span aria-hidden="true">+</span></summary><div class="table-scroll"><table class="audit-table"><caption>Matriz de evaluación por pregunta</caption><thead><tr><th scope="col">Ítem</th><th scope="col">Respuesta seleccionada</th><th scope="col">Puntaje</th><th scope="col">Peso</th><th scope="col">Aporte a x</th></tr></thead><tbody id="audit-body"></tbody></table></div></details>
+      </section>
+      <section id="metodologia" class="method-section" aria-labelledby="method-title">
+        <div><p class="eyebrow">EL MODELO, EN CLARO</p><h2 id="method-title">De las respuestas<br>al valor del crédito.</h2><p>Se promedian las preguntas de cada variable y se combinan según su peso. Ese puntaje define el ajuste sobre la base de tu programa.</p><p class="formula-main">VCAP = VBCI × g(x)</p></div>
+        <div class="method-content"><div class="formula-row"><span>01</span><div><h3>Puntaje ponderado</h3><p>x = 0,20 CP + 0,20 C + 0,30 E + 0,30 P</p></div></div><div class="formula-row"><span>02</span><div><h3>Factor de ajuste</h3><p>Si 1 ≤ x ≤ 3: g(x) = 0,80 + 0,10 × (x − 1)<br>Si 3 &lt; x ≤ 5: g(x) = 1,00 + 0,75 × (x − 3)</p><small>Descuento máximo: 20 %. Incremento máximo: 150 %.</small></div></div><div class="formula-row"><span>03</span><div><h3>Valor por crédito</h3><p>Se multiplica la base por el factor, sin redondeos intermedios. El resultado se redondea al peso más cercano.</p></div></div></div>
+      </section>
+      <details class="base-reference panel"><summary>Consultar los 9 valores base por nivel y modalidad <span aria-hidden="true">+</span></summary><div class="table-scroll"><table><caption>VBCI estimado · vigencia base 2026 · pesos colombianos</caption><thead><tr><th scope="col">Nivel de formación</th><th scope="col">Presencial</th><th scope="col">Híbrida</th><th scope="col">Virtual</th></tr></thead><tbody id="base-table"></tbody></table></div><p>Fuente: Documento Técnico Acuerdo Financiero, figura 10. Son las bases estimadas de 2026. No se aplica automáticamente el IAEP de una vigencia posterior.</p></details>
+      <p class="method-note">Instrumento: metodología MVV v5, 19 preguntas. Esta aplicación utiliza los rangos de la tabla 3 y permite seleccionar un puntaje dentro de cada rango. El documento también menciona puntajes fijos; para este calculador prevalece la selección mediante deslizable solicitada para su implementación.</p>
+    </div>
+    <noscript><p class="error-panel">Activa JavaScript para usar el calculador interactivo.</p></noscript>
+  </main>
+  <footer class="site-footer"><span><b>UPTC</b> · Calculador del VCAP</span><span>Modelo financiero de posgrados · Base 2026</span><a href="https://github.com/Wilzard95/Calculador-del-VCAP-UPTC" target="_blank" rel="noopener">Ver proyecto en GitHub ↗</a></footer>
+  <dialog id="confirm-dialog"><form method="dialog"><p class="eyebrow">EVALUACIÓN DEL PROGRAMA</p><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-actions"><button class="button secondary" value="cancel">Cancelar</button><button id="dialog-confirm" class="button primary" value="confirm">Continuar</button></div></form></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
