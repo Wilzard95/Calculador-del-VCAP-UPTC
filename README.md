@@ -57,6 +57,8 @@ npm test
 
 Las respuestas se guardan en `localStorage` del navegador; no se envían a un servidor de la aplicación. La evaluación completa puede descargarse como JSON o imprimirse y guardarse como PDF. La tipografía se solicita a Google Fonts y dispone de fuentes locales de respaldo.
 
+La identidad visual incluye los logos de UPTC, Departamento de Posgrados, Dirección de Planeación y VAFI, además de dos fotografías oficiales de la Sede Central de Tunja. La procedencia y el tratamiento de cada recurso están documentados en [assets/README.md](assets/README.md).
+
 Los parámetros y las preguntas están en `data/modelo.json`; la lógica en `engine.mjs`. `scripts/extract-source.py` permite reproducir la extracción de las rúbricas si se dispone del documento local `MVV_v5_UPTC.docx`. El documento Word y los archivos de revisión local están excluidos del repositorio.
 
 ## GitHub Pages

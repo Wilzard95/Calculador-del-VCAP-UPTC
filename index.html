@@ -8,18 +8,28 @@
   <title>Calculador del VCAP UPTC</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./branding.css">
+  <link rel="preload" as="image" href="./assets/campus-tunja.jpg">
   <script type="module" src="./app.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#programa">Ir al calculador</a>
   <header class="site-header">
-    <a class="brand" href="./" aria-label="Calculador del VCAP UPTC, inicio"><span class="brand-mark">U</span><span><b>UPTC<span class="brand-divider"> / </span>POSGRADOS</b><small>Planeación académica y financiera</small></span></a>
+    <a class="brand institutional-brand" href="./" aria-label="Calculador del VCAP UPTC, inicio"><img class="university-logo" src="./assets/uptc.svg" width="190" height="89" alt="UPTC · Universidad Pedagógica y Tecnológica de Colombia"><span class="brand-context"><b>POSGRADOS</b><small>Planeación académica y financiera</small></span></a>
     <a class="header-link" href="#metodologia">Conocer el modelo <span aria-hidden="true">↗</span></a>
   </header>
   <main class="page">
     <section class="intro" aria-labelledby="titulo">
       <div><p class="eyebrow"><span class="status-dot"></span> MODELO DE VALORACIÓN DE VARIABLES</p><h1 id="titulo">Calculador del <span>VCAP.</span></h1><p class="intro-text">Define las condiciones de tu programa y estima el valor de su crédito académico de posgrado.</p></div>
       <div class="intro-note"><span class="mini-label">UNA DECISIÓN CON FUNDAMENTO</span><p>4 variables <span>·</span> 19 preguntas</p><small>Valores base del modelo financiero · 2026</small></div>
+    </section>
+    <section class="institutional-strip" aria-label="Identidad de las dependencias de la UPTC">
+      <p class="eyebrow">IDENTIDAD INSTITUCIONAL</p>
+      <div class="institutional-logos">
+        <a class="institutional-unit" href="https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/dep_posgrados/" target="_blank" rel="noopener" title="Departamento de Posgrados · sitio oficial"><span class="posgrados-logo-frame"><img src="./assets/posgrados-banner.png" width="2000" height="115" alt="Departamento de Posgrados UPTC"></span></a>
+        <a class="institutional-unit" href="https://www.uptc.edu.co/sitio/portal/sitios/universidad/rectoria/planeacion/" target="_blank" rel="noopener" title="Dirección de Planeación · sitio oficial"><img class="planning-logo" src="./assets/planeacion.svg" width="320" height="120" alt="Dirección de Planeación UPTC"></a>
+        <a class="institutional-unit" href="https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_adm_fin/" target="_blank" rel="noopener" title="Vicerrectoría Administrativa y Financiera · sitio oficial"><img class="vafi-logo" src="./assets/vafi.svg" width="500" height="220" alt="VAFI · Vicerrectoría Administrativa y Financiera UPTC"></a>
+      </div>
     </section>
     <div id="load-error" class="error-panel" hidden role="alert"></div>
     <div id="application" hidden>
@@ -72,6 +82,7 @@
     </div>
     <noscript><p class="error-panel">Activa JavaScript para usar el calculador interactivo.</p></noscript>
   </main>
+  <section class="campus-banner" aria-label="Campus de la Universidad Pedagógica y Tecnológica de Colombia"><div><p class="eyebrow">UNIVERSIDAD PEDAGÓGICA Y TECNOLÓGICA DE COLOMBIA</p><h2>Formación posgraduada · UPTC</h2><p>Sede Central · Tunja, Boyacá</p></div><a href="https://www.uptc.edu.co/sitio/portal/sitios/universidad/enl/cam/tunja" target="_blank" rel="noopener">Conoce el campus <span aria-hidden="true">↗</span></a></section>
   <footer class="site-footer"><span><b>UPTC</b> · Calculador del VCAP</span><span>Modelo financiero de posgrados · Base 2026</span><a href="https://github.com/Wilzard95/Calculador-del-VCAP-UPTC" target="_blank" rel="noopener">Ver proyecto en GitHub ↗</a></footer>
   <dialog id="confirm-dialog"><form method="dialog"><p class="eyebrow">EVALUACIÓN DEL PROGRAMA</p><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-actions"><button class="button secondary" value="cancel">Cancelar</button><button id="dialog-confirm" class="button primary" value="confirm">Continuar</button></div></form></dialog>
   <div id="toast" class="toast" role="status" hidden></div>

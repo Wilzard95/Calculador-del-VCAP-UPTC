@@ -1,0 +1,135 @@
+/* Identidad institucional: arte original de la UPTC y fotografías de su campus. */
+body { border-top: 5px solid #ffcc00; }
+.site-header { height: 112px; }
+.institutional-brand { gap: 23px; }
+.university-logo { width: 190px; height: 89px; display: block; object-fit: contain; }
+.brand-context { border-left: 1px solid var(--line); padding: 6px 0 6px 23px; }
+.brand-context b { font-size: 13px; letter-spacing: .13em; }
+.brand-context small { font-size: 10px; }
+.intro {
+  position: relative;
+  isolation: isolate;
+  min-height: 245px;
+  padding: 32px;
+  margin: 28px 0 20px;
+  border: 1px solid #dfe3d9;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #fafbf8 0%, #fafbf8f5 33%, #fafbf8c7 58%, #fafbf81a 100%), url('./assets/campus-tunja.jpg') right 42% / cover no-repeat;
+  box-shadow: 0 5px 24px #263c2010;
+}
+.intro h1 { font-size: clamp(34px, 3.9vw, 51px); }
+.intro h1 span { isolation: isolate; }
+.intro-text { max-width: 480px; font-size: 14px; color: #435144; }
+.intro-note {
+  background: #ffffffed;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 13px 16px;
+  box-shadow: 0 3px 16px #10231514;
+}
+.intro-note p { font-size: 17px; }
+.intro-note small { font-size: 10px; }
+.institutional-strip {
+  background: #ebebeb;
+  border: 1px solid #dededb;
+  border-radius: 13px;
+  padding: 12px 25px 10px;
+  margin-bottom: 24px;
+}
+.institutional-strip > .eyebrow { font-size: 8px; letter-spacing: .16em; text-align: center; color: #657063; }
+.institutional-logos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; min-height: 101px; }
+.institutional-unit { min-width: 0; display: flex; align-items: center; justify-content: center; height: 87px; padding: 0 16px; text-decoration: none; }
+.institutional-unit + .institutional-unit { border-left: 1px solid #d1d4cc; }
+.institutional-unit img { display: block; object-fit: contain; }
+.posgrados-logo-frame { display: block; width: 158px; height: 84px; overflow: hidden; flex: none; }
+.posgrados-logo-frame img { width: auto; height: 84px; max-width: none; }
+.planning-logo { width: 230px; height: 86px; max-width: 100%; }
+.vafi-logo { width: 216px; height: 95px; max-width: 100%; }
+.campus-banner {
+  max-width: 1248px;
+  margin: 37px auto 0;
+  min-height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 35px 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  color: #fff;
+  background: linear-gradient(90deg, #101b18e8 0%, #101b18bc 45%, #101b1852 100%), url('./assets/campus-central.jpg') center 43% / cover no-repeat;
+}
+.campus-banner .eyebrow { color: #f4d870; font-size: 9px; }
+.campus-banner h2 { color: #fff; font-size: 28px; margin: 9px 0; }
+.campus-banner p:last-child { color: #e4e9e0; font-size: 12px; }
+.campus-banner > a { color: #fff; text-decoration: none; border-bottom: 1px solid #e7d385; padding-bottom: 5px; font-size: 12px; white-space: nowrap; }
+.campus-banner > a span { margin-left: 16px; }
+.site-footer { margin-top: 22px; }
+@media (min-width: 1450px) { .campus-banner { max-width: 1300px; } }
+@media (max-width: 1328px) { .campus-banner { margin-left: 40px; margin-right: 40px; } }
+@media (max-width: 1080px) {
+  .intro { padding: 28px; min-height: 230px; background-image: linear-gradient(90deg, #fafbf8fa 0%, #fafbf8ef 36%, #fafbf8a3 70%, #fafbf82b 100%), url('./assets/campus-tunja.jpg'); }
+  .intro h1 { max-width: 540px; }
+  .institutional-strip { padding: 10px 18px 8px; }
+  .institutional-unit { padding: 0 12px; }
+  .campus-banner { margin-left: 28px; margin-right: 28px; }
+}
+@media (max-width: 800px) {
+  .site-header { height: 104px; }
+  .university-logo { width: 173px; height: 81px; }
+  .institutional-brand { gap: 15px; }
+  .brand-context { padding-left: 15px; }
+  .brand-context b { font-size: 11px; }
+  .brand-context small { font-size: 8px; max-width: 130px; }
+  .intro { min-height: 235px; margin-top: 21px; padding: 27px 24px; }
+  .intro h1 { font-size: 39px; }
+  .intro-text { max-width: 390px; font-size: 13px; }
+  .institutional-strip { padding: 10px 10px 8px; }
+  .institutional-logos { min-height: 85px; }
+  .institutional-unit { height: 72px; padding: 0 10px; }
+  .posgrados-logo-frame { width: 128px; height: 68px; }
+  .posgrados-logo-frame img { height: 68px; }
+  .planning-logo { width: 175px; height: 66px; }
+  .vafi-logo { width: 169px; height: 74px; }
+  .campus-banner { margin: 28px 20px 0; padding: 28px; min-height: 175px; align-items: flex-start; flex-direction: column; gap: 15px; }
+  .campus-banner h2 { font-size: 26px; }
+  .campus-banner .eyebrow { font-size: 8px; }
+}
+@media (max-width: 600px) {
+  .brand-context { display: none; }
+  .institutional-strip { padding: 10px 7px 7px; margin-bottom: 19px; }
+  .institutional-logos { min-height: 70px; }
+  .institutional-unit { height: 59px; padding: 0 8px; }
+  .posgrados-logo-frame { width: 105px; height: 56px; }
+  .posgrados-logo-frame img { height: 56px; }
+  .planning-logo { width: 133px; height: 50px; }
+  .vafi-logo { width: 130px; height: 57px; }
+}
+@media (max-width: 480px) {
+  .site-header { height: 94px; }
+  .university-logo { width: 162px; height: 76px; }
+  .header-link { font-size: 10px; }
+  .intro { min-height: 223px; margin-top: 18px; margin-bottom: 16px; padding: 24px 19px; background-position: right center; background-image: linear-gradient(90deg, #fafbf8f5 0%, #fafbf8eb 47%, #fafbf8a1 100%), url('./assets/campus-tunja.jpg'); }
+  .intro h1 { font-size: 33px; letter-spacing: -.055em; margin-top: 13px; }
+  .intro .eyebrow { font-size: 7px; letter-spacing: .11em; }
+  .intro-text { font-size: 12px; }
+  .institutional-logos { min-height: 65px; }
+  .institutional-unit { padding: 0 5px; }
+  .posgrados-logo-frame { width: 90px; height: 48px; }
+  .posgrados-logo-frame img { height: 48px; }
+  .planning-logo { width: 109px; height: 41px; }
+  .vafi-logo { width: 109px; height: 48px; }
+  .campus-banner { margin: 24px 15px 0; padding: 24px 20px; }
+  .campus-banner h2 { font-size: 22px; }
+  .campus-banner .eyebrow { font-size: 7px; }
+  .campus-banner > a { font-size: 11px; }
+}
+@media print {
+  body { border-top: 0; }
+  .site-header { height: auto; padding: 0 0 12px; }
+  .university-logo { width: 150px; height: 70px; }
+  .brand-context { display: block; }
+  .intro { background: none; min-height: 0; border: 0; box-shadow: none; margin: 0; padding: 14px 0; }
+  .intro h1 { font-size: 27px; }
+  .institutional-strip, .campus-banner { display: none !important; }
+}
