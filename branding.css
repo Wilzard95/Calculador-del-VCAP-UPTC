@@ -1,4 +1,8 @@
 /* Identidad institucional: arte original de la UPTC y fotografías de su campus. */
+.scale-labels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 4px; }
+.scale-neutral { text-align: center; }
+.scale-neutral > span { display: block; }
+.scale-labels > span:last-child { text-align: right; }
 body { border-top: 5px solid #ffcc00; }
 .site-header { height: 112px; }
 .institutional-brand { gap: 23px; }
